@@ -1,96 +1,94 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Educational Attendance System Design Tokens */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 216 50% 98%;
+    --foreground: 220 18% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 18% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 18% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 213 84% 58%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 147 37% 94%;
+    --secondary-foreground: 147 37% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 216 20% 95%;
+    --muted-foreground: 216 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 213 84% 58%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 216 25% 90%;
+    --input: 216 25% 90%;
+    --ring: 213 84% 58%;
 
-    --radius: 0.5rem;
+    --success: 147 60% 50%;
+    --success-foreground: 0 0% 98%;
 
-    --sidebar-background: 0 0% 98%;
+    --warning: 45 85% 58%;
+    --warning-foreground: 0 0% 98%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --info: 213 84% 58%;
+    --info-foreground: 0 0% 98%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --radius: 0.75rem;
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Educational gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 84% 58%) 0%, hsl(213 70% 65%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(147 60% 50%) 0%, hsl(147 45% 55%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(216 50% 99%) 100%);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 27% 8%;
+    --foreground: 216 25% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 27% 10%;
+    --card-foreground: 216 25% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 27% 10%;
+    --popover-foreground: 216 25% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 213 84% 65%;
+    --primary-foreground: 220 27% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 147 37% 12%;
+    --secondary-foreground: 147 37% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 213 84% 65%;
+    --accent-foreground: 220 27% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 213 84% 65%;
+
+    --success: 147 60% 55%;
+    --success-foreground: 220 27% 8%;
+
+    --warning: 45 85% 65%;
+    --warning-foreground: 220 27% 8%;
+
+    --info: 213 84% 65%;
+    --info-foreground: 220 27% 8%;
   }
 }
 
@@ -100,6 +98,44 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+}
+
+@layer components {
+  .form-section {
+    @apply bg-card rounded-lg p-6 shadow-sm border gradient-card;
+  }
+
+  .report-section {
+    @apply bg-card rounded-lg p-6 shadow-sm border;
+  }
+
+  .points-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .points-high {
+    @apply bg-success/10 text-success border border-success/20;
+  }
+
+  .points-medium {
+    @apply bg-warning/10 text-warning border border-warning/20;
+  }
+
+  .points-low {
+    @apply bg-muted text-muted-foreground border;
   }
 }
