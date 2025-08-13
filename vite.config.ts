@@ -4,7 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/mass-tracker-pro/", // 👈 Required for GitHub Pages
+  // Use relative paths in production so assets load no matter the hosting URL
+  base: mode === "production" ? "./" : "/mass-tracker-pro/",
+
   server: {
     host: "::",
     port: 8080,
